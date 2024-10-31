@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 function loadSkills(skills) {
+    console.log(skills);
     const techSkillsContainer = document.getElementById('tech-skills-container');
     const generalSkillsContainer = document.getElementById('general-skills-container');
 
@@ -35,10 +36,12 @@ function loadSkills(skills) {
     generalSkillsContainer.innerHTML = "";
 
     // Add technical skills via a helper
+    console.log('here');
     loadSkillsHelper(skills.Technical, techSkillsContainer);
 
     // Add general skills via a helper
     loadSkillsHelper(skills.General, generalSkillsContainer);
+    console.log('here2');
 }
 
 function loadSkillsHelper(skills, container) {
