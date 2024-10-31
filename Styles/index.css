@@ -65,6 +65,21 @@ nav a:hover {
     padding: 0 20px;
 }
 
+#introduction, #about, #skills, #experience, #education, #projects, #contact {
+    margin: 50px 0;
+}
+
+#about h1, #skills h1, #experience h1, #education h1, #projects h1, #contact h1 {
+    color: #0FFCBE;
+    font-size: 2em;
+    margin-bottom: 0px;
+}
+
+#about p, #skills p, #experience p, #education p, #projects p, #contact p {
+    color: white;
+    font-size: 1em;
+}
+
 /* ---------- Introduction ---------- */
 #introduction {
     margin-top: 100px;
@@ -105,4 +120,27 @@ nav a:hover {
 
 .contact-link:hover, .resume-link:hover {
     color: #0FFCBE;
+}
+
+/* ---------- About ---------- */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 150px;
+}
+
+.about-image {
+    flex: 0 0 300px;
+    margin-right: 100px;
+}
+
+.about-image img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
 }
