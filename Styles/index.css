@@ -1,0 +1,108 @@
+/* -------------------- Media (Max-Width) CSS -------------------- */
+/* Account for smaller screens */
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+    
+}
+
+/* -------------------- Non-restricted CSS -------------------- */
+html {
+    scroll-behavior: smooth;
+    background-color: #106EBE;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+/* ---------- General ---------- */
+.name {
+    color: #0FFCBE;
+    font-size: 1.5em;
+}
+
+.major {
+    color: #FA8334;
+    font-size: 1.5em;
+}
+
+/* ---------- Header ---------- */
+header {
+    background-color: #0B4A94;
+    padding: 20px 0;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-size: 1.25em;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0FFCBE;
+}
+
+/* ---------- Body ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---------- Introduction ---------- */
+#introduction {
+    margin-top: 100px;
+}
+
+#introduction p {
+    font-size: 3em;
+}
+
+#introduction p span {
+    font-size: inherit;
+    font-weight: bold;
+}
+
+.socials {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.social-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-resume {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+}
+
+.contact-link, .resume-link {
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-link:hover, .resume-link:hover {
+    color: #0FFCBE;
+}
