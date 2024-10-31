@@ -2,8 +2,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Add smooth scrolling to each link and offset by 1/3 of the page
     document.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault();
-    
             const targetID = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetID);
     
