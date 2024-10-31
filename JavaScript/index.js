@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // ----------------------------------------
     // Populate skills section via JSON
     // ----------------------------------------
+    console.log("attempting to fetch data");
     fetch("../Data/Skills.json")
     .then((response) => {return response.json()})
     .then((skills) => {loadSkills(skills)})
