@@ -1,0 +1,14 @@
+{
+    "Technical": [
+        {
+            "Name": "JavaScript",
+            "Image": "../Images/Skills/Technical/JavaScript.png"
+        }
+    ],
+    "General": [
+        {
+            "Name": "Problem Solving",
+            "Image": "../Images/Skills/General/ProblemSolving.png"
+        }
+    ]
+}
