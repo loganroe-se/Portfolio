@@ -70,8 +70,15 @@ nav a:hover {
 }
 
 #about h1, #skills h1, #experience h1, #education h1, #projects h1, #contact h1 {
+    text-align: center;
     color: #0FFCBE;
     font-size: 2em;
+    margin-bottom: 0px;
+}
+
+#about h2, #skills h2, #experience h2, #education h2, #projects h2, #contact h2 {
+    color: #0FFCBE;
+    font-size: 1.5em;
     margin-bottom: 0px;
 }
 
@@ -143,4 +150,37 @@ nav a:hover {
     border-radius: 10px;
     max-width: 100%;
     height: auto;
+}
+
+/* ---------- Skills ---------- */
+.skills-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card p {
+    margin: 5px 0 0 0
+}
+
+.skill-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
