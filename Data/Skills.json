@@ -1,14 +1,170 @@
 {
-    "Technical": [
-        {
-            "Name": "JavaScript",
-            "Image": "../Images/Skills/Technical/JavaScript.png"
-        }
-    ],
-    "General": [
+    "Technical": {
+        "Languages": [
+            {
+                "Name": "Java",
+                "Image": "../Images/Skills/Technical/Languages/Java.png"
+            },
+            {
+                "Name": "MATLAB",
+                "Image": "../Images/Skills/Technical/Languages/MATLAB.png"
+            },
+            {
+                "Name": "JavaScript",
+                "Image": "../Images/Skills/Technical/Languages/JavaScript.png"
+            },
+            {
+                "Name": "TypeScript",
+                "Image": "../Images/Skills/Technical/Languages/TypeScript.png"
+            },
+            {
+                "Name": "HTML",
+                "Image": "../Images/Skills/Technical/Languages/HTML.png"
+            },
+            {
+                "Name": "CSS",
+                "Image": "../Images/Skills/Technical/Languages/CSS.png"
+            },
+            {
+                "Name": "React",
+                "Image": "../Images/Skills/Technical/Languages/React.png"
+            },
+            {
+                "Name": "React Native",
+                "Image": "../Images/Skills/Technical/Languages/React.png"
+            },
+            {
+                "Name": "Python",
+                "Image": "../Images/Skills/Technical/Languages/Python.png"
+            },
+            {
+                "Name": "C++",
+                "Image": "../Images/Skills/Technical/Languages/C++.png"
+            },
+            {
+                "Name": "SQL",
+                "Image": "../Images/Skills/Technical/Languages/SQL.png"
+            },
+            {
+                "Name": "Kotlin",
+                "Image": "../Images/Skills/Technical/Languages/Kotlin.png"
+            },
+            {
+                "Name": "Groovy",
+                "Image": "../Images/Skills/Technical/Languages/Groovy.png"
+            },
+            {
+                "Name": "Bash",
+                "Image": "../Images/Skills/Technical/Languages/Bash.png"
+            }
+        ],
+        "Tools": [
+            {
+                "Name": "Git",
+                "Image": "../Images/Skills/Technical/Tools/Git.png"
+            },
+            {
+                "Name": "AWS",
+                "Image": "../Images/Skills/Technical/Tools/AWS.png"
+            },
+            {
+                "Name": "Figma",
+                "Image": "../Images/Skills/Technical/Tools/Figma.png"
+            },
+            {
+                "Name": "Android Studio",
+                "Image": "../Images/Skills/Technical/Tools/Android_Studio.png"
+            },
+            {
+                "Name": "Jenkins",
+                "Image": "../Images/Skills/Technical/Tools/Jenkins.png"
+            },
+            {
+                "Name": "Node.js",
+                "Image": "../Images/Skills/Technical/Tools/Node_js.png"
+            },
+            {
+                "Name": "Linux",
+                "Image": "../Images/Skills/Technical/Tools/Linux.png"
+            },
+            {
+                "Name": "Bootstrap",
+                "Image": "../Images/Skills/Technical/Tools/Bootstrap.png"
+            },
+            {
+                "Name": "Docker",
+                "Image": "../Images/Skills/Technical/Tools/Docker.png"
+            },
+            {
+                "Name": "Shopify",
+                "Image": "../Images/Skills/Technical/Tools/Shopify.png"
+            },
+            {
+                "Name": "EmailJS",
+                "Image": "../Images/Skills/Technical/Tools/EmailJS.png"
+            },
+            {
+                "Name": "Postman",
+                "Image": "../Images/Skills/Technical/Tools/Postman.svg"
+            },
+            {
+                "Name": "Tailwind CSS",
+                "Image": "../Images/Skills/Technical/Tools/Tailwind_CSS.png"
+            }
+        ]
+    },
+    "Soft_Skills": [
         {
             "Name": "Problem Solving",
-            "Image": "../Images/Skills/General/ProblemSolving.png"
+            "Image": "../Images/Skills/Soft_Skills/Problem_Solving.png"
+        },
+        {
+            "Name": "Leader",
+            "Image": "../Images/Skills/Soft_Skills/Leader.png"
+        },
+        {
+            "Name": "Strong Communication",
+            "Image": "../Images/Skills/Soft_Skills/Strong_Communication.png"
+        },
+        {
+            "Name": "Collaboration",
+            "Image": "../Images/Skills/Soft_Skills/Collaboration.png"
+        },
+        {
+            "Name": "Critical Thinking",
+            "Image": "../Images/Skills/Soft_Skills/Critical_Thinking.png"
+        },
+        {
+            "Name": "Detail Oriented",
+            "Image": "../Images/Skills/Soft_Skills/Detail_Oriented.png"
+        },
+        {
+            "Name": "Creativity",
+            "Image": "../Images/Skills/Soft_Skills/Creativity.png"
+        },
+        {
+            "Name": "Adaptability",
+            "Image": "../Images/Skills/Soft_Skills/Adaptability.png"
+        },
+        {
+            "Name": "Time Management",
+            "Image": "../Images/Skills/Soft_Skills/Time_Management.png"
+        },
+        {
+            "Name": "Dependability",
+            "Image": "../Images/Skills/Soft_Skills/Dependability.png"
+        },
+        {
+            "Name": "Initiative",
+            "Image": "../Images/Skills/Soft_Skills/Initiative.png"
+        },
+        {
+            "Name": "Open-Mindedness",
+            "Image": "../Images/Skills/Soft_Skills/Open_Mindedness.png"
+        },
+        {
+            "Name": "Resilient",
+            "Image": "../Images/Skills/Soft_Skills/Resilient.png"
         }
     ]
 }

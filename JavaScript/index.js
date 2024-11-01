@@ -93,18 +93,21 @@ function scrollToTop() {
 }
 
 function loadSkills(skills) {
-    const techSkillsContainer = document.getElementById('tech-skills-container');
-    const generalSkillsContainer = document.getElementById('general-skills-container');
+    const techSkills_Languages_Container = document.getElementById('tech-skills-languages-container');
+    const techSkills_Tools_Container = document.getElementById('tech-skills-tools-container');
+    const softSkillsContainer = document.getElementById('soft-skills-container');
 
-    // Ensure both are cleared
-    techSkillsContainer.innerHTML = "";
-    generalSkillsContainer.innerHTML = "";
+    // Ensure all are cleared
+    techSkills_Languages_Container.innerHTML = "";
+    techSkills_Tools_Container.innerHTML = "";
+    softSkillsContainer.innerHTML = "";
 
     // Add technical skills via a helper
-    loadSkillsHelper(skills.Technical, techSkillsContainer);
+    loadSkillsHelper(skills.Technical.Languages, techSkills_Languages_Container);
+    loadSkillsHelper(skills.Technical.Tools, techSkills_Tools_Container);
 
-    // Add general skills via a helper
-    loadSkillsHelper(skills.General, generalSkillsContainer);
+    // Add soft skills via a helper
+    loadSkillsHelper(skills.Soft_Skills, softSkillsContainer);
 }
 
 function loadSkillsHelper(skills, container) {
