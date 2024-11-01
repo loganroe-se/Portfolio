@@ -1,0 +1,54 @@
+{
+    "Education": [
+        {
+            "Name": "Iowa State University",
+            "Major": "Bachelor's Degree in Computer Engineering",
+            "GPA": "3.74",
+            "Date": "Expected May 2025",
+            "Minor": "General Business",
+            "Image": "../Images/Logos/IowaStateUniversity.png",
+            "Languages": [
+                "Java",
+                "Python",
+                "C++",
+                "JavaScript",
+                "TypeScript",
+                "HTML",
+                "CSS",
+                "React",
+                "React Native",
+                "Kotlin",
+                "SQL",
+                "Groovy",
+                "Bash Script",
+                "XML",
+                "JSON",
+                "VBA",
+                "VHDL",
+                "Verilog"
+            ],
+            "Tools": [
+                "Git",
+                "Figma",
+                "Lucid",
+                "Draw.io",
+                "Android Studio",
+                "Node.js",
+                "Linux",
+                "VirtualBox"
+            ],
+            "Soft_Skills": [
+                "Communication",
+                "Collaboration",
+                "Problem Solving",
+                "Critial Thinking",
+                "Creativity",
+                "Adaptability",
+                "Time Management",
+                "Reliability",
+                "Initiative",
+                "Open-Mindedness"
+            ]
+        }
+    ]
+}

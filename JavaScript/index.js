@@ -26,6 +26,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     .catch((err) => {console.log("Error in fetching Skills: " + err)});
 
     // ----------------------------------------
+    // Populate education section via JSON
+    // ----------------------------------------
+    fetch("../Data/Education.json")
+    .then((response) => {return response.json()})
+    .then((education) => {loadEducation(education)})
+    .catch((err) => {console.log("Error in fetching Education: " + err)});
+
+    // ----------------------------------------
     // Contact Me Section
     // ----------------------------------------
     // Initialize public key
@@ -85,6 +93,88 @@ function loadSkillsHelper(skills, container) {
         
         // Add the new element to the container
         container.appendChild(newSkill);
+    }
+}
+
+function loadEducation(education) {
+    const educationContainer = document.getElementById('education-container');
+
+    // Ensure it is cleared
+    educationContainer.innerHTML = "";
+
+    // Add education
+    const educationArr = education.Education;
+    for (let i = 0; i < educationArr.length; i++) {
+        // Get all attributes
+        let name = educationArr[i].Name;
+        let major = educationArr[i].Major;
+        let gpa = educationArr[i].GPA;
+        let date = educationArr[i].Date;
+        let minor = educationArr[i].Minor;
+        let image = educationArr[i].Image;
+        let languages = educationArr[i].Languages.join(', ');
+        let tools = educationArr[i].Tools.join(', ');
+        let softSkills = educationArr[i].Soft_Skills.join(', ');
+
+        // Construct the new HTML elements
+        let newEducation = document.createElement("div");
+        newEducation.classList.add("education-card");
+        newEducation.onclick = function() {
+            toggleDetails(newEducation);
+        };
+        newEducation.innerHTML = `
+            <div class="education-date-container">
+                <p class="education-date">${date}</p>
+            </div>
+            <div class="education-info">
+                <img class="education-logo" src=${image} alt=${name}>
+                <div class="education-summary">
+                    <h3>${name}</h3>
+                    <p>${major}</p>
+                    <p>GPA: ${gpa}</p>
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            `;
+        
+        let newEducationDetails = document.createElement("div");
+        newEducationDetails.classList.add("education-details");
+        newEducationDetails.innerHTML = `
+            <p><b>Minor:</b> ${minor}</p>
+            <p><b>Languages:</b> ${languages}</p>
+            <p><b>Tools:</b> ${tools}</p>
+            <p><b>Soft Skills:</b> ${softSkills}</p>
+            `;
+
+        // Add the new elements to the container
+        educationContainer.appendChild(newEducation);
+        educationContainer.appendChild(newEducationDetails);
+    }
+}
+
+function toggleDetails(card) {
+    const details = card.nextElementSibling;
+    const toggleIcon = card.querySelector('.toggle-icon');
+
+    // Toggle display
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = "block";
+        details.offsetHeight;
+        details.style.opacity = '1';
+        details.style.height = details.scrollHeight + 'px';
+        details.style.padding = "15px 15px 0 15px";
+
+        toggleIcon.style.transform = "rotate(180deg)";
+    } else {
+        details.style.opacity = '0';
+        details.style.height = '0';
+        details.style.padding = "0 15px 0 15px";
+
+        setTimeout(() => {
+            details.style.display = 'none';
+        }, 500);
+
+        toggleIcon.style.transform = "rotate(0deg)";
     }
 }
 

@@ -83,7 +83,6 @@ nav a:hover {
 }
 
 #about p, #skills p, #experience p, #education p, #projects p, #contact p {
-    color: white;
     font-size: 1em;
 }
 
@@ -189,6 +188,68 @@ nav a:hover {
     height: 60px;
     margin-bottom: 10px;
     border-radius: 10px;
+}
+
+
+
+/* ---------- Education ---------- */
+#education-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.education-card {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 20px 0 0;
+    padding: 0 15px 15px;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.education-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.education-date-container {
+    text-align: center;
+    margin: 10px;
+}
+
+.education-date {
+    color: #0FFCBE;
+    display: inline;
+}
+
+.education-info {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+}
+
+.education-logo {
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+.toggle-icon {
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+}
+
+.education-details {
+    display: none;
+    margin-top: -10px;
+    padding: 0 15px 0 15px;
+    border: 1px solid lightgray;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease, padding 0.5s ease;
 }
 
 
