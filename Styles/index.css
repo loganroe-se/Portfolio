@@ -21,6 +21,26 @@ body {
     color: white;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #0B4A94;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1em;
+    display: none;
+    transition: opacity 0.3s;
+}
+
+#backToTop.show {
+    display: block;
+    opacity: 1;
+}
+
 /* ---------- General ---------- */
 .name {
     color: #0FFCBE;
@@ -193,15 +213,17 @@ nav a:hover {
 /* ---------- Experience ---------- */
 
 
-/* ---------- Education & Experience ---------- */
+/* ---------- Experience, Education, & Projects ---------- */
 #education-container,
-#experience-container {
+#experience-container,
+#project-container {
     position: relative;
     margin-bottom: 20px;
 }
 
 .education-card,
-.experience-card {
+.experience-card,
+.project-card {
     border: 1px solid lightgray;
     border-radius: 10px;
     margin: 20px 0 0;
@@ -211,37 +233,43 @@ nav a:hover {
 }
 
 .education-card:hover,
-.experience-card:hover {
+.experience-card:hover,
+.project-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .education-date-container,
-.experience-date-container {
+.experience-date-container,
+.project-date-container {
     text-align: center;
     margin: 10px;
 }
 
 .education-date,
-.experience-date {
+.experience-date, 
+.project-date {
     color: #0FFCBE;
     display: inline;
 }
 
 .education-info,
-.experience-info {
+.experience-info,
+.project-info {
     align-items: center;
     display: flex;
     gap: 50px;
 }
 
 .education-logo,
-.experience-logo {
+.experience-logo,
+.project-logo {
     max-height: 150px;
     border-radius: 10px;
 }
 
 .education-details,
-.experience-details {
+.experience-details,
+.project-details {
     display: none;
     margin-top: -10px;
     padding: 0 15px 0 15px;

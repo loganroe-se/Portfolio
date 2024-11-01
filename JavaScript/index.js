@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", (event) => {
     // Add smooth scrolling to each link and offset by 1/3 of the page
-    document.querySelectorAll('embedded-link').forEach(link => {
+    document.querySelectorAll('.embedded-link').forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
 
-            const targetID = this.getAttribute('href').substring(1);
+            const targetID = link.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetID);
     
             // Set offset position to 1/3 down the page
@@ -16,6 +16,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
             });
         });
     });
+
+    // Back to top button
+    window.onscroll = function() {
+        const backToTopBtn = document.getElementById('backToTop');
+
+        if (window.scrollY > 200) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    };
 
     // ----------------------------------------
     // Populate skills section via JSON
@@ -42,6 +53,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     .catch((err) => {console.log("Error in fetching Education: " + err)});
 
     // ----------------------------------------
+    // Populate projects section via JSON
+    // ----------------------------------------
+    fetch("../Data/Projects.json")
+    .then((response) => {return response.json()})
+    .then((projects) => {loadProjects(projects)})
+    .catch((err) => {console.log("Error in fetching Projects: " + err)});
+
+    // ----------------------------------------
     // Contact Me Section
     // ----------------------------------------
     emailjs.init('p_fvjnrxm1vOznGyv');
@@ -65,6 +84,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
             });
     });
 });
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
 
 function loadSkills(skills) {
     const techSkillsContainer = document.getElementById('tech-skills-container');
@@ -211,6 +237,72 @@ function loadEducation(education) {
         // Add the new elements to the container
         educationContainer.appendChild(newEducation);
         educationContainer.appendChild(newEducationDetails);
+    }
+}
+
+function loadProjects(projects) {
+    const schoolProjectsContainer = document.getElementById('school-projects-container');
+    const personalProjectsContainer = document.getElementById('personal-projects-container');
+
+    // Ensure both are cleared
+    schoolProjectsContainer.innerHTML = "";
+    personalProjectsContainer.innerHTML = "";
+
+    // Add school projects via a helper
+    loadProjectsHelper(projects.School, schoolProjectsContainer);
+
+    // Add personal projects via a helper
+    loadProjectsHelper(projects.Personal, personalProjectsContainer);
+}
+
+function loadProjectsHelper(projects, container) {
+    for (let i = 0; i < projects.length; i++) {
+        // Get all attributes
+        let name = projects[i].Name;
+        let role = projects[i].Role;
+        let date = projects[i].Date;
+        let image = projects[i].Image;
+        let video = projects[i].Video;
+        let description = projects[i].Description;
+        let accomplishments = projects[i].Accomplishments.join(', ');
+        let languages = projects[i].Languages.join(', ');
+        let tools = projects[i].Tools.join(', ');
+        let softSkills = projects[i].Soft_Skills.join(', ');
+
+        // Construct the new HTML elements
+        let newProject = document.createElement("div");
+        newProject.classList.add("project-card");
+        newProject.onclick = function() {
+            toggleDetails(newProject);
+        };
+        newProject.innerHTML = `
+            <div class="project-date-container">
+                <p class="project-date">${date}</p>
+            </div>
+            <div class="project-info">
+                <img class="project-logo" src=${image} alt=${name}>
+                <div class="project-summary">
+                    <h3>${name}</h3>
+                    <p>Role: ${role}</p>
+                    ${video ? `<p>Demonstration: ${video}</p>` : ''}
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            `;
+        
+        let newProjectDetails = document.createElement("div");
+        newProjectDetails.classList.add("project-details");
+        newProjectDetails.innerHTML = `
+            <p><b>Description:</b> ${description}</p>
+            <p><b>Accomplishments:</b> ${accomplishments}</p>
+            <p><b>Languages:</b> ${languages}</p>
+            <p><b>Tools:</b> ${tools}</p>
+            <p><b>Soft Skills:</b> ${softSkills}</p>
+            `;
+
+        // Add the new elements to the container
+        container.appendChild(newProject);
+        container.appendChild(newProjectDetails);
     }
 }
 

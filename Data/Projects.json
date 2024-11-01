@@ -1,0 +1,27 @@
+{
+    "School": [
+        {
+            "Name": "CyStaff",
+            "Role": "Front-End Developer",
+            "Date": "August 2023 - December 2023",
+            "Image": "../Images/Logos/JohnDeere.png",
+            "Video": "",
+            "Description": "Placeholder",
+            "Accomplishments": [
+                "Placeholder"
+            ],
+            "Languages": [
+                "Placeholder"
+            ],
+            "Tools": [
+                "Placeholder"
+            ],
+            "Soft_Skills": [
+                "Placeholder"
+            ]
+        }
+    ],
+    "Personal": [
+
+    ]
+}
