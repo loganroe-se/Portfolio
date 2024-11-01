@@ -26,6 +26,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
     .catch((err) => {console.log("Error in fetching Skills: " + err)});
 
     // ----------------------------------------
+    // Populate experiences section via JSON
+    // ----------------------------------------
+    fetch("../Data/Experiences.json")
+    .then((response) => {return response.json()})
+    .then((experiences) => {loadExperiences(experiences)})
+    .catch((err) => {console.log("Error in fetching Experiences: " + err)});
+
+    // ----------------------------------------
     // Populate education section via JSON
     // ----------------------------------------
     fetch("../Data/Education.json")
@@ -36,10 +44,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // ----------------------------------------
     // Contact Me Section
     // ----------------------------------------
-    // Initialize public key
-    // emailjs.init({
-    //     publicKey: p_fvjnrxm1vOznGyv,
-    // });
     emailjs.init('p_fvjnrxm1vOznGyv');
 
     // Set a listener to send an email upon Send Message click
@@ -96,6 +100,60 @@ function loadSkillsHelper(skills, container) {
     }
 }
 
+function loadExperiences(experiences) {
+    const experiencesContainer = document.getElementById('experience-container');
+
+    // Ensure it is cleared
+    experiencesContainer.innerHTML = "";
+
+    // Add experiences
+    const experiencesArr = experiences.Experiences;
+    for (let i = 0; i < experiencesArr.length; i++) {
+        // Get all attributes
+        let company = experiencesArr[i].Company;
+        let title = experiencesArr[i].Title;
+        let date = experiencesArr[i].Date;
+        let image = experiencesArr[i].Image;
+        let accomplishments = experiencesArr[i].Accomplishments.join(', ');
+        let languages = experiencesArr[i].Languages.join(', ');
+        let tools = experiencesArr[i].Tools.join(', ');
+        let softSkills = experiencesArr[i].Soft_Skills.join(', ');
+
+        // Construct the new HTML elements
+        let newExperience = document.createElement("div");
+        newExperience.classList.add("experience-card");
+        newExperience.onclick = function() {
+            toggleDetails(newExperience);
+        };
+        newExperience.innerHTML = `
+            <div class="experience-date-container">
+                <p class="experience-date">${date}</p>
+            </div>
+            <div class="experience-info">
+                <img class="experience-logo" src=${image} alt=${company}>
+                <div class="experience-summary">
+                    <h3>${company}</h3>
+                    <p>${title}</p>
+                </div>
+                <span class="toggle-icon">▼</span>
+            </div>
+            `;
+
+        let newExperienceDetails = document.createElement("div");
+        newExperienceDetails.classList.add("experience-details");
+        newExperienceDetails.innerHTML = `
+            <p><b>Accomplishments:</b> ${accomplishments}</p>
+            <p><b>Languages:</b> ${languages}</p>
+            <p><b>Tools:</b> ${tools}</p>
+            <p><b>Soft Skills:</b> ${softSkills}</p>
+            `;
+
+        // Add the new elements to the container
+        experiencesContainer.appendChild(newExperience);
+        experiencesContainer.appendChild(newExperienceDetails);
+    }
+}
+
 function loadEducation(education) {
     const educationContainer = document.getElementById('education-container');
 
@@ -112,6 +170,8 @@ function loadEducation(education) {
         let date = educationArr[i].Date;
         let minor = educationArr[i].Minor;
         let image = educationArr[i].Image;
+        let accomplishments = educationArr[i].Accomplishments.join(', ');
+        let relCoursework = educationArr[i].Relevant_Coursework.join(', ');
         let languages = educationArr[i].Languages.join(', ');
         let tools = educationArr[i].Tools.join(', ');
         let softSkills = educationArr[i].Soft_Skills.join(', ');
@@ -141,6 +201,8 @@ function loadEducation(education) {
         newEducationDetails.classList.add("education-details");
         newEducationDetails.innerHTML = `
             <p><b>Minor:</b> ${minor}</p>
+            <p><b>Accomplishments:</b> ${accomplishments}</p>
+            <p><b>Relevant Coursework:</b> ${relCoursework}</p>
             <p><b>Languages:</b> ${languages}</p>
             <p><b>Tools:</b> ${tools}</p>
             <p><b>Soft Skills:</b> ${softSkills}</p>

@@ -190,15 +190,18 @@ nav a:hover {
     border-radius: 10px;
 }
 
+/* ---------- Experience ---------- */
 
 
-/* ---------- Education ---------- */
-#education-container {
+/* ---------- Education & Experience ---------- */
+#education-container,
+#experience-container {
     position: relative;
     margin-bottom: 20px;
 }
 
-.education-card {
+.education-card,
+.experience-card {
     border: 1px solid lightgray;
     border-radius: 10px;
     margin: 20px 0 0;
@@ -207,39 +210,38 @@ nav a:hover {
     cursor: pointer;
 }
 
-.education-card:hover {
+.education-card:hover,
+.experience-card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.education-date-container {
+.education-date-container,
+.experience-date-container {
     text-align: center;
     margin: 10px;
 }
 
-.education-date {
+.education-date,
+.experience-date {
     color: #0FFCBE;
     display: inline;
 }
 
-.education-info {
+.education-info,
+.experience-info {
     align-items: center;
     display: flex;
     gap: 50px;
 }
 
-.education-logo {
+.education-logo,
+.experience-logo {
     max-height: 150px;
     border-radius: 10px;
 }
 
-.toggle-icon {
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: 30px;
-    transition: transform 0.3s ease;
-}
-
-.education-details {
+.education-details,
+.experience-details {
     display: none;
     margin-top: -10px;
     padding: 0 15px 0 15px;
@@ -250,6 +252,13 @@ nav a:hover {
     height: 0;
     overflow: hidden;
     transition: opacity 0.5s ease, height 0.5s ease, padding 0.5s ease;
+}
+
+.toggle-icon {
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
 }
 
 

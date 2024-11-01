@@ -7,6 +7,20 @@
             "Date": "Expected May 2025",
             "Minor": "General Business",
             "Image": "../Images/Logos/IowaStateUniversity.png",
+            "Accomplishments": [
+                "Dean's List",
+                "Honors"
+            ],
+            "Relevant_Coursework": [
+                "Design & Analysis of Algorithms",
+                "Big Data Analytics",
+                "Construction of User Interfaces",
+                "Digital Logic",
+                "Linear Algebra",
+                "Embedded Systems",
+                "Operating Systems",
+                "Principles of Programming Languages"
+            ],
             "Languages": [
                 "Java",
                 "Python",

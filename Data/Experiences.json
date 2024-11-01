@@ -1,0 +1,22 @@
+{
+    "Experiences": [
+        {
+            "Company": "John Deere",
+            "Title": "Computer Engineer",
+            "Date": "October 2022 - Present",
+            "Image": "../Images/Logos/JohnDeere.png",
+            "Accomplishments": [
+                "Placeholder"
+            ],
+            "Languages": [
+                "Placeholder"
+            ],
+            "Tools": [
+                "Placeholder"
+            ],
+            "Soft_Skills": [
+                "Placeholder"
+            ]
+        }
+    ]
+}
