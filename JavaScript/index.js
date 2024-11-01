@@ -141,9 +141,10 @@ function loadExperiences(experiences) {
         // Get all attributes
         let company = experiencesArr[i].Company;
         let title = experiencesArr[i].Title;
+        let employmentType = experiencesArr[i].Employment_Type;
         let date = experiencesArr[i].Date;
         let image = experiencesArr[i].Image;
-        let accomplishments = experiencesArr[i].Accomplishments.join(', ');
+        let accomplishmentList = createListFromArray(experiencesArr[i].Accomplishments);
         let languages = experiencesArr[i].Languages.join(', ');
         let tools = experiencesArr[i].Tools.join(', ');
         let softSkills = experiencesArr[i].Soft_Skills.join(', ');
@@ -163,6 +164,7 @@ function loadExperiences(experiences) {
                 <div class="experience-summary">
                     <h3>${company}</h3>
                     <p>${title}</p>
+                    <p>${employmentType}</p>
                 </div>
                 <span class="toggle-icon">▼</span>
             </div>
@@ -171,7 +173,7 @@ function loadExperiences(experiences) {
         let newExperienceDetails = document.createElement("div");
         newExperienceDetails.classList.add("experience-details");
         newExperienceDetails.innerHTML = `
-            <p><b>Accomplishments:</b> ${accomplishments}</p>
+            <p><b>Accomplishments:</b> ${accomplishmentList}</p>
             <p><b>Languages:</b> ${languages}</p>
             <p><b>Tools:</b> ${tools}</p>
             <p><b>Soft Skills:</b> ${softSkills}</p>
@@ -181,6 +183,18 @@ function loadExperiences(experiences) {
         experiencesContainer.appendChild(newExperience);
         experiencesContainer.appendChild(newExperienceDetails);
     }
+}
+
+function createListFromArray(array) {
+    let list = '<ul>';
+    console.log(array);
+    array.forEach(item => {
+        list += `<li>${item}</li>`;
+    });
+
+    list += '</ul>';
+
+    return list;
 }
 
 function loadEducation(education) {

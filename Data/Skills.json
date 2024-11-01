@@ -108,6 +108,10 @@
                 "Image": "../Images/Skills/Technical/Tools/Postman.svg"
             },
             {
+                "Name": "Visual Studio",
+                "Image": "../Images/Skills/Technical/Tools/Visual_Studio.png"
+            },
+            {
                 "Name": "Tailwind CSS",
                 "Image": "../Images/Skills/Technical/Tools/Tailwind_CSS.png"
             }
