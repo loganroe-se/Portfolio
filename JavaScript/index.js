@@ -24,6 +24,34 @@ window.addEventListener("DOMContentLoaded", (event) => {
     .then((response) => {return response.json()})
     .then((skills) => {loadSkills(skills)})
     .catch((err) => {console.log("Error in fetching Skills: " + err)});
+
+    // ----------------------------------------
+    // Contact Me Section
+    // ----------------------------------------
+    // Initialize public key
+    // emailjs.init({
+    //     publicKey: p_fvjnrxm1vOznGyv,
+    // });
+    emailjs.init('p_fvjnrxm1vOznGyv');
+
+    // Set a listener to send an email upon Send Message click
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_nqxul58', 'template_0evuwu8', this)
+            .then(() => {
+                // Ensure error text is hidden
+                document.getElementById('contact-error-text').style.display = 'none';
+                console.log('Message sent successfully!');
+                // Call a helper to show the toast to say sent successfully
+                showToast('Message sent successfully!');
+                document.getElementById('contact-form').reset();
+            }, (error) => {
+                console.log('Message failed to send with error: ', error);
+                // Call a helper to update error text
+                updateError('The message was unable to be sent. Please try again later or use my contact information on the right!');
+            });
+    });
 });
 
 function loadSkills(skills) {
@@ -58,4 +86,25 @@ function loadSkillsHelper(skills, container) {
         // Add the new element to the container
         container.appendChild(newSkill);
     }
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.innerText = message;
+    toast.style.display = 'block';
+
+    // Hide after 3 seconds
+    setTimeout(() => {
+        toast.style.opacity = 0;
+        setTimeout(() => {
+           toast.style.display = 'none';
+           toast.style.opacity = 0.9; 
+        }, 500);
+    }, 3000);
+}
+
+function updateError(message) {
+    const errorText = document.getElementById('contact-error-text');
+    errorText.innerText = message;
+    errorText.style.display = 'block';
 }

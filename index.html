@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logan Roe - Portfolio</title>
     <link rel="stylesheet" href="./Styles/index.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./JavaScript/index.js"></script>
 </head>
 <body>
@@ -76,19 +77,73 @@
         </section>
         <hr>
         <section id="experience">
-            
+            <h1>Experience</h1>
         </section>
         <hr>
         <section id="education">
-            
+            <h1>Education</h1>
         </section>
         <hr>
         <section id="projects">
-            
+            <h1>Projects</h1>
         </section>
         <hr>
         <section id="contact">
-            
+            <h1>Contact Me</h1>
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <div id="contact-text">If you have any questions, concerns, or opportunites, please feel free to contact me.</div><br>
+                    <form id="contact-form">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="from_name" autocomplete="name" required><br>
+
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required><br>
+                        
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea><br>
+
+                        <div id="contact-error-container">
+                            <div id="contact-error-text">The message was unable to be sent. Please try again later or use my contact information on the right!</div>
+                        </div>
+
+                        <div id="contact-submit-container">
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <p class="icon-text-container">
+                        <span class="icon-container">
+                            <img class="contact-img" src="./Images/General/at-solid.svg" alt="Location Dot">
+                        </span>
+                        loganroe388@gmail.com
+                    </p> 
+                    <p class="icon-text-container">
+                        <span class="icon-container">
+                            <img class="contact-img" src="./Images/General/phone-solid.svg" alt="Location Dot">
+                        </span>
+                        (815) 992-0287
+                    </p> 
+                    <p class="icon-text-container">
+                        <span class="icon-container">
+                            <img class="contact-img" src="./Images/General/location-dot-solid.svg" alt="Location Dot">
+                        </span>
+                        Ames, Iowa, United States
+                    </p>
+
+                    <div style="margin-top: 50px" class="socials">
+                        <a href="https://github.com/loganroe-se" target="_blank" aria-label="GitHub">
+                            <img src="./Images/Logos/github-mark-white.png" alt="GitHub Logo" class="social-logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/loganroe-se" target="_blank" aria-label="LinkedIn">
+                            <img src="./Images/Logos/LinkedIn.png" alt="LinkedIn Logo" class="social-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="toast" class="toast">Message sent successfully!</div>
         </section>
     </div>
 
