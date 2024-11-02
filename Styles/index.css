@@ -85,24 +85,24 @@ nav a:hover {
     padding: 0 20px;
 }
 
-#introduction, #about, #skills, #experience, #education, #projects, #contact {
+#introduction, #about, #skills, #experience, #education, #projects, #contact, #essays {
     margin: 50px 0;
 }
 
-#about h1, #skills h1, #experience h1, #education h1, #projects h1, #contact h1 {
+#about h1, #skills h1, #experience h1, #education h1, #projects h1, #contact h1, #essays h1 {
     text-align: center;
     color: #0FFCBE;
     font-size: 2em;
     margin-bottom: 0px;
 }
 
-#about h2, #skills h2, #experience h2, #education h2, #projects h2, #contact h2 {
+#about h2, #skills h2, #experience h2, #education h2, #projects h2, #contact h2, #essays h2 {
     color: #0FFCBE;
     font-size: 1.5em;
     margin-bottom: 0px;
 }
 
-#about p, #skills p, #experience p, #education p, #projects p, #contact p {
+#about p, #skills p, #experience p, #education p, #projects p, #contact p, #essays p {
     font-size: 1em;
 }
 
