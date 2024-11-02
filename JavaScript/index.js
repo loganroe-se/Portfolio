@@ -187,7 +187,7 @@ function loadExperiences(experiences) {
 
 function createListFromArray(array) {
     let list = '<ul>';
-    console.log(array);
+    
     array.forEach(item => {
         list += `<li>${item}</li>`;
     });
@@ -280,8 +280,10 @@ function loadProjectsHelper(projects, container) {
         let date = projects[i].Date;
         let image = projects[i].Image;
         let video = projects[i].Video;
-        let description = projects[i].Description;
-        let accomplishments = projects[i].Accomplishments.join(', ');
+        let course = projects[i].Course;
+        let groupMemberList = createListFromArray(projects[i].Group_Members);
+        let description = projects[i].Description.join('<br><br>');
+        let accomplishmentList = createListFromArray(projects[i].Accomplishments);
         let languages = projects[i].Languages.join(', ');
         let tools = projects[i].Tools.join(', ');
         let softSkills = projects[i].Soft_Skills.join(', ');
@@ -297,11 +299,12 @@ function loadProjectsHelper(projects, container) {
                 <p class="project-date">${date}</p>
             </div>
             <div class="project-info">
-                <img class="project-logo" src=${image} alt=${name}>
+                ${image ? `<img class="project-logo" src=${image} alt=${name}>` : ''}
                 <div class="project-summary">
                     <h3>${name}</h3>
-                    <p>Role: ${role}</p>
+                    <p>${role}</p>
                     ${video ? `<p>Demonstration: ${video}</p>` : ''}
+                    ${course ? `<p>Course: ${course}</p>` : ''}
                 </div>
                 <span class="toggle-icon">▼</span>
             </div>
@@ -310,8 +313,9 @@ function loadProjectsHelper(projects, container) {
         let newProjectDetails = document.createElement("div");
         newProjectDetails.classList.add("project-details");
         newProjectDetails.innerHTML = `
+            ${groupMemberList ? `<p><b>Group Members:</b> ${groupMemberList}</p>` : ''}
             <p><b>Description:</b> ${description}</p>
-            <p><b>Accomplishments:</b> ${accomplishments}</p>
+            <p><b>Accomplishments:</b> ${accomplishmentList}</p>
             <p><b>Languages:</b> ${languages}</p>
             <p><b>Tools:</b> ${tools}</p>
             <p><b>Soft Skills:</b> ${softSkills}</p>

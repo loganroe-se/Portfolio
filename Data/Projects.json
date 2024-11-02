@@ -1,23 +1,166 @@
 {
     "School": [
         {
+            "Name": "Senior Design - dripdrop",
+            "Role": "Full Stack Developer",
+            "Date": "August 2024 - Present",
+            "Image": "../Images/Projects/Logos/dripdrop.png",
+            "Video": "",
+            "Course": "CprE 491 & 492 - Senior Design",
+            "Group_Members": [
+                "Zachary Foote",
+                "Kolby Kucera",
+                "Kaden Wingert",
+                "Elyse Kriegel",
+                "Gavin Rich"
+            ],
+            "Description": [
+                "dripdrop is an apparel-based social media platform that allows users to post images and links to the apparel in those images so others can buy the clothes with those links. These links can even be affiliate links so that we earn money via commissions and the user can earn dripdrop points. These points can cashed in for gift cards at our partnered sites. Aside from basic post functionality, we will also be providing AI-generated lists of items that look similar but have cheaper prices. This can allow people to purchase products that give a similar look to their desired outfit, but at a cheaper price.",
+                "dripdrop aims to connect the average user and large apparel companies to eliminate the need for approving influencers for affiliate links. This gives incentive to smaller creators and should also give incentive to smaller companies to use our platform to advertise their apparel."
+            ],
+            "Accomplishments": [
+                "Spearheaded the revision and restructure of our backend database schema for a better, easier to understand, easier to manage approach that is more flexible for future changes.",
+                "Generated important ideas in the rebranding of our original idea & in making improvements to our existing idea.",
+                "Wrote lambda functions and created tables for frontend and backend communication."
+            ],
+            "Languages": [
+                "Python",
+                "React"
+            ],
+            "Tools": [
+                "AWS",
+                "Bruno"
+            ],
+            "Soft_Skills": [
+                "Collaboration",
+                "Communication",
+                "Leadership",
+                "Dependability",
+                "Creativity",
+                "Problem Solving",
+                "Time Management",
+                "Critical Thinking"
+            ]
+        },
+        {
             "Name": "CyStaff",
             "Role": "Front-End Developer",
             "Date": "August 2023 - December 2023",
-            "Image": "../Images/Logos/JohnDeere.png",
+            "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
-            "Description": "Placeholder",
+            "Course": "Com S 309 - Software Development Practices",
+            "Group_Members": [
+                "Rodrigo Santamaria",
+                "Yi Ang",
+                "Andrew Sand"
+            ],
+            "Description": [
+                "CyStaff aimed to be a mobile application that would redefine how employees would interact with one another on the ISU campus. Specifically, employees would have accounts without admin access, there were building admins that had more access than employees, but only for building specific information, and there were overall admins who had access to everything. For example admins could add, edit, and delete users and the ability to create system wide announcements, however, regular employees and building admins did not have this power.",
+                "All of the users have access to view announcements, view a fully functioning calendar with events, an employee directory to search other employees, including sort by features and filtering features, the ability to message other employees via Web Sockets, edit default settings, and track work hours. To go into more detail, one of the most in-depth features was the calendar, with the ability to view time by weeks or months, view events for each day, and create events/meetings that could be online or specify a location and invite others, both required and optional attendance."
+            ],
             "Accomplishments": [
-                "Placeholder"
+                "Developed key app features such as calendar (with events), login, employee directory, user management, live messaging, and settings.",
+                "Wrote over 18,000 lines of code.",
+                "#2 Best Team",
+                "Top Coder",
+                "Created automated testing that covered over 70% of the lines of code in the entire project."
             ],
             "Languages": [
-                "Placeholder"
+                "Java",
+                "Groovy",
+                "Kotlin"
             ],
             "Tools": [
-                "Placeholder"
+                "Android Studio",
+                "Postman"
             ],
             "Soft_Skills": [
-                "Placeholder"
+                "Collaboration",
+                "Communication",
+                "Leadership",
+                "Dependability",
+                "Creativity",
+                "Problem Solving"
+            ]
+        },
+        {
+            "Name": "CyBot",
+            "Role": "Embedded Software Engineer",
+            "Date": "January 2023 - May 2023",
+            "Image": "../Images/Projects/Logos/blank_icon.png",
+            "Video": "",
+            "Course": "CprE 288 - Embedded Systems",
+            "Group_Members": [
+                "Daryl Kay",
+                "Gavin Rich",
+                "Matthew Brammer"
+            ],
+            "Description": [
+                "My group and I worked together to program a robot (CyBot) to be able to detect objects, determine their widths and their location relative to the robot, detect holes, bumps, lines, etc., and display them on a GUI (graphical user interface) so it could be used remotely. Importantly, all code that was loaded onto the robot was written in C whilst all GUI code was written in Python.",
+                "We had to design a robot that could detect objects with IR and Ping sensors which could see items at a range but had to do it both quickly and accurately, could avoid holes, using sensors on the bottom of the CyBot that would detect when a drop was found or when a line was being crossed, and could avoid bumping into small objects more than once (since the objects were short, the sensor on the top-right could not see them, so the bump sensors were used).",
+                "To detect items at a range, we used both an IR (infrared) sensor and a PING (scans in a cone by sending sonar and determines distance based on how long it takes to receive a response due to it bouncing off objects) sensor to detect these objects. We had found early on that the PING sensor was good at being fast, but was not overly accurate. However, the IR sensor was quite slow but was much more accurate. To combine these, we used a rolling average (calculate an average as values were coming in) to find the rough locations of objects using the PING sensor. Then, using this information, the IR sensor would go along and scan only the locations in which an object was suspected to be. In this way, we were able to keep scanning fast but accurate. To accurately determine distance from the robot, since the sensor was further forwards than the center of the robot, trigonometry was used to calculate the exact distance and angle, relative to the center of the robot, that an object was at. To avoid holes and going outside of boundaries (denoted by bold white lines), drop sensors on the bottom of the bot were used which simply provide an interrupt to the program to stop what it is doing so the bot does not drop into a hole or go out of the border. To avoid bumping small objects more than once, the bump sensors on the front of the robot would give us a fairly accurate idea of where the smaller object was which we would then make note of on the GUI.",
+                "For the GUI to work and be user-friendly, it started off with a blank space and just showed the bot itself, with the direction it was facing also being shown. From there, it would add in lines (as borders) as they were found, short objects as they were bumped into, large and thin objects as they were scanned (with a difference between the large and thin objects), and holes as they were found. Importantly, it was noted previously that thin and wide objects were distinguished on the GUI, this was because we knew our final goal was going to be denoted by four thin objects placed in a square pattern, so, we denoted these differently to help show that this may be the goal. After finding at least three thin objects in a square pattern, we could be pretty confident that we had found the final destination. Finally, when reaching the goal, a sound was played via the bot to show that we had reached the destination.",
+                "Overall, the project resulted in us creating C code to run a CyBot that could detect objects (short, tall, thin, wide), detect holes, detect lines, and accurately portray all of this on a GUI. The CyBot also was capable of playing sounds to show something such as reaching the final destination. In the end, I was able to further develop teamwork, communication, and time management skills while also improving various engineering skills such as programming, problem-solving, creativity/innovation, and more. The skills learned in this project could be applied to various real-world applications that involve programming, working in teams, and general design of robotic items."
+            ],
+            "Accomplishments": [
+                "Developed key features and functions to ensure functionality.",
+                "Derived important equations for use in triangulating objects with accuracy by using rolling averages and a combination of IR and Ping sensors.",
+                "Designed portions of the GUI and helped with some development aspects."
+            ],
+            "Languages": [
+                "C++",
+                "Python"
+            ],
+            "Tools": [
+                "Microcontroller",
+                "CyBot Robot",
+                "Ping Sensor",
+                "IR Sensor"
+            ],
+            "Soft_Skills": [
+                "Collaboration",
+                "Communication",
+                "Leadership",
+                "Dependability",
+                "Problem Solving"
+            ]
+        },
+        {
+            "Name": "Calculator Using FPGA Boards",
+            "Role": "Designer and Developer",
+            "Date": "August 2022 - December 2022",
+            "Image": "../Images/Projects/Logos/blank_icon.png",
+            "Video": "",
+            "Course": "CprE 281 - Digital Logic",
+            "Group_Members": [
+                "Zachary Foote"
+            ],
+            "Description": [
+                "My partner and I worked together to develop a base-level calculator on an FPGA (Field Programmable Gate Arrays) board. This calculator accepted user input from the buttons and switches on the board while giving output via the six LED screens. This entire project was done in VHDL code and block diagram files.",
+                "User input works by taking in sixteen inputs based on the sixteen left-most switches on the bottom left-hand corner of the FPGA board. These sixteen inputs work in the following fashion: The leftmost switch is for a 0, the next one to the right is a 1, the one after that is a 2, and so on. For this to work, a number can be chosen by simply flipping a switch into the up position to select that specific decimal value. If multiple switches are flipped at the same time, the leftmost (closest value to zero) is prioritized. Further, three rocker switches (a basic switch with the same functionality as the bottom-left switches), which were located on a daughter board, were used to determine addition/subtraction, push/pop, and which set of four values to display. The addition/subtraction switch simply chooses between addition (0) and subtraction (1), the push/pop switch determines whether to “push” items, put items onto the list of stored numbers, or “pop” items, which allows for an operation (add/subtract), to occur, and the switch to decide what four values will be displayed will be explained more shortly.",
+                "Outputs work by taking in the user inputs and providing output in two main different ways, via LEDs and seven-segment displays. There were eight total registers to store values meaning that the calculator could hold eight total numbers at any given time, up to fifteen and down to zero in each as all values were to be displayed in hexadecimal. We decided to use some of the seven-segment displays for other purposes so we were left with only the four right-most seven-segment displays on the FPGA board to display eight values. To handle this, we decided to implement a rocker switch input which, if zero, displays the first four values, and, if one, displays the last four values. Since this could get confusing, we decided to use the LED lights under the screens to show which screen is currently active (i.e. what screen will currently be pushed/popped if an operation were to take place). Furthermore, we also dedicated another seven-segment display to show which value the user currently has selected. Importantly, since we had a minimum and maximum, we would have to tell the user when a number exceeded these limitations. To do this, we used LEDs to show overflow (when a number exceeded 15, F in hex) and underflow (when a number went below 0, 0 in hex). Finally, one more seven-segment display was used to show the calculated value of any addition/subtraction operation so that the user could see their result before putting it into any given register to help aid usability.",
+                "As a final result, we ended up with a calculator that could only go from zero to fifteen, both in results and inputs, do addition/subtraction, store up to eight values at any given time, and show overflow/underflow. Further, I was able to develop teamwork and time management skills as well as further developing basic engineering skills such as problem-solving. The skills I learned in this project will help me in the realworld when working in groups and designing low-level products."
+            ],
+            "Accomplishments": [
+                "Designed a calculator with addition/substraction, push/pop, and overflow/underflow capabilities using FPGA boards.",
+                "Used seven-segment displays to show hex digits efficiently.",
+                "Prioritized inputs based on their location on the FPGA board.",
+                "Showed overflow/underflow when a value was calculated that could not be displayed in hex.",
+                "Thoroughly tested for bugs to ensure full functionality with no compromises to quality and consistency."
+            ],
+            "Languages": [
+                "VHDL",
+                "Block Diagrams (BDF)"
+            ],
+            "Tools": [
+                "FPGA Boards",
+                "Seven-Segment Displays"
+            ],
+            "Soft_Skills": [
+                "Collaboration",
+                "Communication",
+                "Problem Solving",
+                "Detail Oriented"
             ]
         }
     ],
