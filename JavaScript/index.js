@@ -292,7 +292,8 @@ function loadProjectsHelper(projects, container) {
         let languages = projects[i].Languages && projects[i].Languages.length > 0 ? projects[i].Languages.join(', ') : '';
         let tools = projects[i].Tools.join(', ');
         let softSkills = projects[i].Soft_Skills.join(', ');
-
+        let supportingLinkList = projects[i].Supporting_Links && projects[i].Supporting_Links.length > 0 ? createListFromSupportingLinks(projects[i].Supporting_Links) : '';
+        
         // Construct the new HTML elements
         let newProject = document.createElement("div");
         newProject.classList.add("project-card");
@@ -324,12 +325,18 @@ function loadProjectsHelper(projects, container) {
             ${languages ? `<p><b>Languages:</b> ${languages}</p>` : ''}
             <p><b>Tools:</b> ${tools}</p>
             <p><b>Soft Skills:</b> ${softSkills}</p>
+            ${supportingLinkList ? `<p><b>Related Links:</b><br>${supportingLinkList}</p>` : ''}
             `;
 
         // Add the new elements to the container
         container.appendChild(newProject);
         container.appendChild(newProjectDetails);
     }
+}
+
+function createListFromSupportingLinks(links) {
+    const linkMap = links.map(link => `<a href="${link.Link}" target="_blank"><b>${link.Name}</b></a>`);
+    return createListFromArray(linkMap);
 }
 
 function toggleDetails(card) {

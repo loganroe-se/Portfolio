@@ -40,6 +40,16 @@
                 "Problem Solving",
                 "Time Management",
                 "Critical Thinking"
+            ],
+            "Supporting_Links": [
+                {
+                    "Name": "Visit our website (WIP)!",
+                    "Link": "https://www.dripdropco.com"
+                },
+                {
+                    "Name": "Visit our team page!",
+                    "Link": "https://sdmay25-25.sd.ece.iastate.edu/"
+                }
             ]
         },
         {
