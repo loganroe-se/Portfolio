@@ -259,14 +259,19 @@ function loadEducation(education) {
 
 function loadProjects(projects) {
     const schoolProjectsContainer = document.getElementById('school-projects-container');
+    const researchProjectsContainer = document.getElementById('research-projects-container');
     const personalProjectsContainer = document.getElementById('personal-projects-container');
 
-    // Ensure both are cleared
+    // Ensure all are cleared
     schoolProjectsContainer.innerHTML = "";
+    researchProjectsContainer.innerHTML = "";
     personalProjectsContainer.innerHTML = "";
 
     // Add school projects via a helper
     loadProjectsHelper(projects.School, schoolProjectsContainer);
+    
+    // Add research projects via a helper
+    loadProjectsHelper(projects.Research, researchProjectsContainer);
 
     // Add personal projects via a helper
     loadProjectsHelper(projects.Personal, personalProjectsContainer);
@@ -281,10 +286,10 @@ function loadProjectsHelper(projects, container) {
         let image = projects[i].Image;
         let video = projects[i].Video;
         let course = projects[i].Course;
-        let groupMemberList = createListFromArray(projects[i].Group_Members);
+        let groupMemberList = projects[i].Group_Members && projects[i].Group_Members.length > 0 ? createListFromArray(projects[i].Group_Members) : '';
         let description = projects[i].Description.join('<br><br>');
         let accomplishmentList = createListFromArray(projects[i].Accomplishments);
-        let languages = projects[i].Languages.join(', ');
+        let languages = projects[i].Languages && projects[i].Languages.length > 0 ? projects[i].Languages.join(', ') : '';
         let tools = projects[i].Tools.join(', ');
         let softSkills = projects[i].Soft_Skills.join(', ');
 
@@ -316,7 +321,7 @@ function loadProjectsHelper(projects, container) {
             ${groupMemberList ? `<p><b>Group Members:</b> ${groupMemberList}</p>` : ''}
             <p><b>Description:</b> ${description}</p>
             <p><b>Accomplishments:</b> ${accomplishmentList}</p>
-            <p><b>Languages:</b> ${languages}</p>
+            ${languages ? `<p><b>Languages:</b> ${languages}</p>` : ''}
             <p><b>Tools:</b> ${tools}</p>
             <p><b>Soft Skills:</b> ${softSkills}</p>
             `;

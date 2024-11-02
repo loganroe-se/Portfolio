@@ -164,6 +164,34 @@
             ]
         }
     ],
+    "Research": [
+        {
+            "Name": "Undergraduate Research - ARA",
+            "Role": "Embedded Software Engineer",
+            "Date": "January 2022 - May 2022",
+            "Image": "../Images/Projects/Logos/ARA.png",
+            "Video": "",
+            "Description": [
+                "ARA is a 16 million dollar research project with aims of setting up 5G towers on Iowa State University's campus. The ultimate goal of this project is so the nearby research farms, and nearby rural communites, will be able to use the 5G connection to run machinery that requires fast, reliable, and affordable internet."
+            ],
+            "Accomplishments": [
+                "Worked directly with Joshua Boateng leading to significant learning opportunities about computer/software engineering.",
+                "Aided in the creation of necessary hardware and software components for future tests to be run.",
+                "Decided to switch from an Agricultural Engineer to a Computer Engineer based on my interest in this project."
+            ],
+            "Tools": [
+                "Git",
+                "Microcontroller",
+                "Ethernet Cables"
+            ],
+            "Soft_Skills": [
+                "Collaboration",
+                "Communication",
+                "Problem Solving",
+                "Detail Oriented"
+            ]
+        }
+    ],
     "Personal": [
 
     ]
