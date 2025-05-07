@@ -285,7 +285,9 @@ function loadProjectsHelper(projects, container) {
         let date = projects[i].Date;
         let image = projects[i].Image;
         let video = projects[i].Video;
+        let poster = projects[i].Poster;
         let course = projects[i].Course;
+        let GitHub = projects[i].GitHub;
         let groupMemberList = projects[i].Group_Members && projects[i].Group_Members.length > 0 ? createListFromArray(projects[i].Group_Members) : '';
         let description = projects[i].Description.join('<br><br>');
         let accomplishmentList = createListFromArray(projects[i].Accomplishments);
@@ -293,6 +295,7 @@ function loadProjectsHelper(projects, container) {
         let tools = projects[i].Tools.join(', ');
         let softSkills = projects[i].Soft_Skills.join(', ');
         let supportingLinkList = projects[i].Supporting_Links && projects[i].Supporting_Links.length > 0 ? createListFromSupportingLinks(projects[i].Supporting_Links) : '';
+        let supportingFilesList = projects[i].Supporting_Files && projects[i].Supporting_Files.length > 0 ? createListFromSupportingFiles(projects[i].Supporting_Files) : '';
         
         // Construct the new HTML elements
         let newProject = document.createElement("div");
@@ -309,7 +312,6 @@ function loadProjectsHelper(projects, container) {
                 <div class="project-summary">
                     <h3>${name}</h3>
                     <p>${role}</p>
-                    ${video ? `<p>Demonstration: ${video}</p>` : ''}
                     ${course ? `<p>Course: ${course}</p>` : ''}
                 </div>
                 <span class="toggle-icon">▼</span>
@@ -319,6 +321,35 @@ function loadProjectsHelper(projects, container) {
         let newProjectDetails = document.createElement("div");
         newProjectDetails.classList.add("project-details");
         newProjectDetails.innerHTML = `
+            ${video && poster ? `
+                <p><b>Demo Video & Poster</b></p>
+                <div class="project-image-wrapper">
+                    <div class="project-image-video-caption">
+                        <video width="200" height="400" controls>
+                            <source src=${video} type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="project-image-caption">Video: Mobile Application Demo</p>
+                    </div>
+                    <div class="project-image-video-caption">
+                        <img
+                            id="project-poster-image"
+                            src=${poster}
+                            alt="Poster"
+                            class="project-uniform-image"
+                            onclick="toggleEnlarge(this)"
+                        />
+                        <p class="project-image-caption">${name} Poster</p>
+                    </div>
+
+                    <div id="project-image-modal" class="project-modal" onclick="closeModal(event)">
+                        <span class="project-modal-close">&times;</span>
+                        <img class="project-modal-content" id="enlarged-img" />
+                    </div>
+                </div>
+                `
+                 : ''}
+            ${GitHub ? `<p><b>Code Base:</b></p><ul><li><a href="${GitHub}" target="_blank">GitHub Repository</a></li></ul>` : ''}
             ${groupMemberList ? `<p><b>Group Members:</b> ${groupMemberList}</p>` : ''}
             <p><b>Description:</b> ${description}</p>
             <p><b>Accomplishments:</b> ${accomplishmentList}</p>
@@ -326,6 +357,7 @@ function loadProjectsHelper(projects, container) {
             <p><b>Tools:</b> ${tools}</p>
             <p><b>Soft Skills:</b> ${softSkills}</p>
             ${supportingLinkList ? `<p><b>Related Links:</b><br>${supportingLinkList}</p>` : ''}
+            ${supportingFilesList ? `<p><b>Related Files:</b><br>${supportingFilesList}</p>` : ''}
             `;
 
         // Add the new elements to the container
@@ -337,6 +369,11 @@ function loadProjectsHelper(projects, container) {
 function createListFromSupportingLinks(links) {
     const linkMap = links.map(link => `<a href="${link.Link}" target="_blank"><b>${link.Name}</b></a>`);
     return createListFromArray(linkMap);
+}
+
+function createListFromSupportingFiles(files) {
+    const fileMap = files.map(file => `<a href="${file.File}" target="_blank" download="${file.FileName}"><b>${file.Name}</b></a>`);
+    return createListFromArray(fileMap);
 }
 
 function toggleDetails(card) {
@@ -384,4 +421,23 @@ function updateError(message) {
     const errorText = document.getElementById('contact-error-text');
     errorText.innerText = message;
     errorText.style.display = 'block';
+}
+
+function toggleEnlarge(img) {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("enlarged-img");
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+}
+
+function closeModal(event) {
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("enlarged-img");
+
+    // Close if click is outside image or on the close icon
+    if (event.target === modal || event.target.classList.contains("modal-close")) {
+      modal.style.display = "none";
+      modalImg.src = "";
+    }
 }
