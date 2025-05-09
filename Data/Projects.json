@@ -30,12 +30,14 @@
             "Languages": [
                 "Python",
                 "React",
-                "React Native"
+                "React Native",
+                "TypeScript"
             ],
             "Tools": [
                 "AWS",
                 "Bruno",
-                "Expo Go"
+                "Expo Go",
+                "MySQL"
             ],
             "Soft_Skills": [
                 "Collaboration",
