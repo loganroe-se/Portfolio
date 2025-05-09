@@ -98,7 +98,9 @@
             ],
             "Tools": [
                 "Android Studio",
-                "Postman"
+                "Postman",
+                "Spring Boot",
+                "Maven"
             ],
             "Soft_Skills": [
                 "Collaboration",
