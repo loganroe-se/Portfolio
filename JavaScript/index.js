@@ -285,7 +285,7 @@ function loadProjectsHelper(projects, container) {
         let date = projects[i].Date;
         let image = projects[i].Image;
         let video = projects[i].Video;
-        let poster = projects[i].Poster;
+        let extraImage = projects[i].Extra_Image;
         let course = projects[i].Course;
         let GitHub = projects[i].GitHub;
         let groupMemberList = projects[i].Group_Members && projects[i].Group_Members.length > 0 ? createListFromArray(projects[i].Group_Members) : '';
@@ -321,7 +321,7 @@ function loadProjectsHelper(projects, container) {
         let newProjectDetails = document.createElement("div");
         newProjectDetails.classList.add("project-details");
         newProjectDetails.innerHTML = `
-            ${video && poster ? `
+            ${video && extraImage ? `
                 <p><b>Demo Video & Poster</b></p>
                 <div class="project-image-wrapper">
                     <div class="project-image-video-caption">
@@ -334,7 +334,7 @@ function loadProjectsHelper(projects, container) {
                     <div class="project-image-video-caption">
                         <img
                             id="project-poster-image"
-                            src=${poster}
+                            src=${extraImage}
                             alt="Poster"
                             class="project-uniform-image"
                             onclick="toggleEnlarge(this)"
@@ -344,11 +344,10 @@ function loadProjectsHelper(projects, container) {
 
                     <div id="project-image-modal" class="project-modal" onclick="closeModal(event)">
                         <span class="project-modal-close">&times;</span>
-                        <img class="project-modal-content" id="enlarged-img" />
+                        <img class="project-modal-content" id="project-enlarged-img" />
                     </div>
                 </div>
-                `
-                 : ''}
+                `: ''}
             ${GitHub ? `<p><b>Code Base:</b></p><ul><li><a href="${GitHub}" target="_blank">GitHub Repository</a></li></ul>` : ''}
             ${groupMemberList ? `<p><b>Group Members:</b> ${groupMemberList}</p>` : ''}
             <p><b>Description:</b> ${description}</p>
@@ -424,19 +423,19 @@ function updateError(message) {
 }
 
 function toggleEnlarge(img) {
-    const modal = document.getElementById("image-modal");
-    const modalImg = document.getElementById("enlarged-img");
+    const modal = document.getElementById("project-image-modal");
+    const modalImg = document.getElementById("project-enlarged-img");
 
     modal.style.display = "block";
     modalImg.src = img.src;
 }
 
 function closeModal(event) {
-    const modal = document.getElementById("image-modal");
-    const modalImg = document.getElementById("enlarged-img");
+    const modal = document.getElementById("project-image-modal");
+    const modalImg = document.getElementById("project-enlarged-img");
 
     // Close if click is outside image or on the close icon
-    if (event.target === modal || event.target.classList.contains("modal-close")) {
+    if (event.target === modal || event.target.classList.contains("project-modal-close")) {
       modal.style.display = "none";
       modalImg.src = "";
     }

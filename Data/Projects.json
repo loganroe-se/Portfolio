@@ -6,7 +6,7 @@
             "Date": "August 2024 - Present",
             "Image": "../Images/Projects/Logos/dripdrop.png",
             "Video": "../Images/SD_Demo/FullDemo.mp4",
-            "Poster": "../Images/SD_Demo/Poster.png",
+            "Extra_Image": "../Images/SD_Demo/Poster.png",
             "Course": "CprE 491 & 492 - Senior Design",
             "GitHub": "https://github.com/loganroe-se/ISU_Senior_Design",
             "Group_Members": [
@@ -74,7 +74,7 @@
             "Date": "August 2023 - December 2023",
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
-            "Poster": "",
+            "Extra_Image": "",
             "Course": "Com S 309 - Software Development Practices",
             "GitHub": "",
             "Group_Members": [
@@ -111,6 +111,13 @@
                 "Dependability",
                 "Creativity",
                 "Problem Solving"
+            ],
+            "Supporting_Files": [
+                {
+                    "Name": "Block Diagram",
+                    "FileName": "CyStaff_Block_Diagram",
+                    "File": "../Images/Projects/CyStaff_Block_Diagram.png"
+                }
             ]
         },
         {
@@ -119,7 +126,7 @@
             "Date": "January 2023 - May 2023",
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
-            "Poster": "",
+            "Extra_Image": "",
             "Course": "CprE 288 - Embedded Systems",
             "GitHub": "",
             "Group_Members": [
@@ -163,7 +170,7 @@
             "Date": "August 2022 - December 2022",
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
-            "Poster": "",
+            "Extra_Image": "",
             "Course": "CprE 281 - Digital Logic",
             "GitHub": "",
             "Group_Members": [
@@ -205,7 +212,7 @@
             "Date": "January 2022 - May 2022",
             "Image": "../Images/Projects/Logos/ARA.png",
             "Video": "",
-            "Poster": "",
+            "Extra_Image": "",
             "Description": [
                 "ARA is a 16 million dollar research project with aims of setting up 5G towers on Iowa State University's campus. The ultimate goal of this project is so the nearby research farms, and nearby rural communites, will be able to use the 5G connection to run machinery that requires fast, reliable, and affordable internet."
             ],
