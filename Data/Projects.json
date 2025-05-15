@@ -3,7 +3,7 @@
         {
             "Name": "Senior Design - dripdrop",
             "Role": "Full Stack Developer",
-            "Date": "August 2024 - Present",
+            "Date": "August 2024 - May 2025",
             "Image": "../Images/Projects/Logos/dripdrop.png",
             "Video": "../Images/SD_Demo/FullDemo.mp4",
             "Extra_Image": "../Images/SD_Demo/Poster.png",
@@ -69,6 +69,44 @@
             ]
         },
         {
+            "Name": "Adversial Searching Competition",
+            "Role": "Designer & Developer",
+            "Date": "January 2025 - May 2025",
+            "Image": "../Images/Projects/Logos/blank_icon.png",
+            "Video": "",
+            "Extra_Image": "",
+            "Course": "ComS 472 - Principles of Artificial Intelligence",
+            "GitHub": "https://github.com/loganroe-se/ISU_ComS_472",
+            "Group_Members": [
+                "Zachary Foote"
+            ],
+            "Description": [
+                "This involves three total projects where the first of which was a basic search algorithm, however, the second two were a much more sophisticated adversial searching algorithm.",
+                "Preface for Projects II & III: All projects are performed with a 30x30 grid where obstacles are marked by a 1 (i.e. a world is an MxM matrix such that world[0][0] == 1 if (0, 0) contains an obstacle, else, world[0][0] == 0 to indicate no obstacle). This world map is given to each project's algorithm immediately. Allowed moves are all orthogonal and diagonal movements, as well as staying still, so 9 total movements, all costing 1. There were three total palyers in each project and the goal was to get the highested average score (you get a 3 for capturing and a 1 if someone else makes an illegal move first). To see more details, please visit my GitHub."
+            ],
+            "Accomplishments": [
+                "Aided in the design & development of the algorithms from start to finish, with a roughly 50/50 contribution.",
+                "Thoroughly tested numerous solutions that we produced to find the best performing and most optimized algorithm, given the specs.",
+                "Received 1st place with an average score of about 1.8 on Project II",
+                "Note: Results of Project III (as in placement amongst the class) is unknown so far"
+            ],
+            "Languages": [
+                "Python"
+            ],
+            "Tools": [
+                "Git"
+            ],
+            "Soft_Skills": [
+                "Collaboration",
+                "Communication",
+                "Dependability",
+                "Creativity",
+                "Problem Solving",
+                "Time Management",
+                "Critical Thinking"
+            ]
+        },
+        {
             "Name": "CyStaff",
             "Role": "Front-End Developer",
             "Date": "August 2023 - December 2023",
@@ -76,7 +114,7 @@
             "Video": "",
             "Extra_Image": "",
             "Course": "Com S 309 - Software Development Practices",
-            "GitHub": "",
+            "GitHub": "https://github.com/loganroe-se/ISU_ComS_309",
             "Group_Members": [
                 "Rodrigo Santamaria",
                 "Yi Ang",
@@ -128,7 +166,7 @@
             "Video": "",
             "Extra_Image": "",
             "Course": "CprE 288 - Embedded Systems",
-            "GitHub": "",
+            "GitHub": "https://github.com/loganroe-se/ISU_CprE_288",
             "Group_Members": [
                 "Daryl Kay",
                 "Gavin Rich",
