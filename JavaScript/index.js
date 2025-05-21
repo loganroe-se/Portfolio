@@ -213,7 +213,7 @@ function loadEducation(education) {
         let date = educationArr[i].Date;
         let minor = educationArr[i].Minor;
         let image = educationArr[i].Image;
-        let accomplishments = educationArr[i].Accomplishments.join(', ');
+        let accomplishments = educationArr[i].Accomplishments.join(' & ');
         let relCoursework = educationArr[i].Relevant_Coursework.join(', ');
         let languages = educationArr[i].Languages.join(', ');
         let tools = educationArr[i].Tools.join(', ');
@@ -234,6 +234,7 @@ function loadEducation(education) {
                 <div class="education-summary">
                     <h3>${name}</h3>
                     <p>${major}</p>
+                    <p>${accomplishments}</p>
                     <p>GPA: ${gpa}</p>
                 </div>
                 <span class="toggle-icon">▼</span>
@@ -244,7 +245,6 @@ function loadEducation(education) {
         newEducationDetails.classList.add("education-details");
         newEducationDetails.innerHTML = `
             <p><b>Minor:</b> ${minor}</p>
-            <p><b>Accomplishments:</b> ${accomplishments}</p>
             <p><b>Relevant Coursework:</b> ${relCoursework}</p>
             <p><b>Languages:</b> ${languages}</p>
             <p><b>Tools:</b> ${tools}</p>
@@ -286,6 +286,7 @@ function loadProjectsHelper(projects, container) {
         let image = projects[i].Image;
         let video = projects[i].Video;
         let extraImage = projects[i].Extra_Image;
+        let overview = projects[i].Overview;
         let course = projects[i].Course;
         let GitHub = projects[i].GitHub;
         let groupMemberList = projects[i].Group_Members && projects[i].Group_Members.length > 0 ? createListFromArray(projects[i].Group_Members) : '';
@@ -311,6 +312,7 @@ function loadProjectsHelper(projects, container) {
                 ${image ? `<img class="project-logo" src=${image} alt=${name}>` : ''}
                 <div class="project-summary">
                     <h3>${name}</h3>
+                    <p class="project-tagline">${overview}</p>
                     <p>${role}</p>
                     ${course ? `<p>Course: ${course}</p>` : ''}
                 </div>

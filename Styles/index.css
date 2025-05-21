@@ -268,6 +268,19 @@ footer .footer-container {
     gap: 50px;
 }
 
+.education-quantifiers,
+.experience-quantifiers,
+.project-quantifiers {
+    color: #FA8334;
+    font-weight: bold;
+}
+
+.education-tagline,
+.experience-tagline,
+.project-tagline {
+    color: #A0DDE6;
+}
+
 .education-logo,
 .experience-logo,
 .project-logo {

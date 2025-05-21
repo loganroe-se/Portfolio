@@ -3,8 +3,8 @@
         {
             "Name": "Iowa State University",
             "Major": "Bachelor's Degree in Computer Engineering",
-            "GPA": "3.78",
-            "Date": "Expected May 2025",
+            "GPA": "3.80",
+            "Date": "August 2021 - May 2025",
             "Minor": "General Business",
             "Image": "../Images/Logos/IowaStateUniversity.png",
             "Accomplishments": [
@@ -16,6 +16,7 @@
                 "Big Data Analytics",
                 "Construction of User Interfaces",
                 "Software Development Practices",
+                "Principles of Artificial Intelligence",
                 "Digital Logic",
                 "Linear Algebra",
                 "Embedded Systems",

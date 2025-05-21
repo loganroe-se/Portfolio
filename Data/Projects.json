@@ -7,6 +7,7 @@
             "Image": "../Images/Projects/Logos/dripdrop.png",
             "Video": "../Images/SD_Demo/FullDemo.mp4",
             "Extra_Image": "../Images/SD_Demo/Poster.png",
+            "Overview": "AI-Powered Social Media App",
             "Course": "CprE 491 & 492 - Senior Design",
             "GitHub": "https://github.com/loganroe-se/ISU_Senior_Design",
             "Group_Members": [
@@ -75,6 +76,7 @@
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
             "Extra_Image": "",
+            "Overview": "Competitive Multi-Agent Search Algorithms on a 30x30 Grid",
             "Course": "ComS 472 - Principles of Artificial Intelligence",
             "GitHub": "https://github.com/loganroe-se/ISU_ComS_472",
             "Group_Members": [
@@ -113,6 +115,7 @@
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
             "Extra_Image": "",
+            "Overview": "Employee-Focused ISU App with Live Messaging, Events, and User Management",
             "Course": "Com S 309 - Software Development Practices",
             "GitHub": "https://github.com/loganroe-se/ISU_ComS_309",
             "Group_Members": [
@@ -165,6 +168,7 @@
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
             "Extra_Image": "",
+            "Overview": "Autonomous Robot Using IR & Sonar to Map, Navigate, and Detect Hazards",
             "Course": "CprE 288 - Embedded Systems",
             "GitHub": "https://github.com/loganroe-se/ISU_CprE_288",
             "Group_Members": [
@@ -209,6 +213,7 @@
             "Image": "../Images/Projects/Logos/blank_icon.png",
             "Video": "",
             "Extra_Image": "",
+            "Overview": "Hex Calculator with Overflow Handling on an FPGA",
             "Course": "CprE 281 - Digital Logic",
             "GitHub": "",
             "Group_Members": [
@@ -250,6 +255,7 @@
             "Date": "January 2022 - May 2022",
             "Image": "../Images/Projects/Logos/ARA.png",
             "Video": "",
+            "Overview": "",
             "Extra_Image": "",
             "Description": [
                 "ARA is a 16 million dollar research project with aims of setting up 5G towers on Iowa State University's campus. The ultimate goal of this project is so the nearby research farms, and nearby rural communites, will be able to use the 5G connection to run machinery that requires fast, reliable, and affordable internet."

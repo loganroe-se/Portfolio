@@ -2,6 +2,10 @@
     "Technical": {
         "Languages": [
             {
+                "Name": "Python",
+                "Image": "../Images/Skills/Technical/Languages/Python.png"
+            },
+            {
                 "Name": "Java",
                 "Image": "../Images/Skills/Technical/Languages/Java.png"
             },
@@ -34,10 +38,6 @@
                 "Image": "../Images/Skills/Technical/Languages/React.png"
             },
             {
-                "Name": "Python",
-                "Image": "../Images/Skills/Technical/Languages/Python.png"
-            },
-            {
                 "Name": "C++",
                 "Image": "../Images/Skills/Technical/Languages/C++.png"
             },
@@ -68,14 +68,6 @@
                 "Image": "../Images/Skills/Technical/Tools/AWS.png"
             },
             {
-                "Name": "Figma",
-                "Image": "../Images/Skills/Technical/Tools/Figma.png"
-            },
-            {
-                "Name": "Android Studio",
-                "Image": "../Images/Skills/Technical/Tools/Android_Studio.png"
-            },
-            {
                 "Name": "Jenkins",
                 "Image": "../Images/Skills/Technical/Tools/Jenkins.png"
             },
@@ -88,8 +80,8 @@
                 "Image": "../Images/Skills/Technical/Tools/Linux.png"
             },
             {
-                "Name": "Bootstrap",
-                "Image": "../Images/Skills/Technical/Tools/Bootstrap.png"
+                "Name": "Figma",
+                "Image": "../Images/Skills/Technical/Tools/Figma.png"
             },
             {
                 "Name": "Docker",
@@ -108,12 +100,16 @@
                 "Image": "../Images/Skills/Technical/Tools/Postman.svg"
             },
             {
-                "Name": "Visual Studio",
-                "Image": "../Images/Skills/Technical/Tools/Visual_Studio.png"
+                "Name": "Bootstrap",
+                "Image": "../Images/Skills/Technical/Tools/Bootstrap.png"
             },
             {
                 "Name": "Tailwind CSS",
                 "Image": "../Images/Skills/Technical/Tools/Tailwind_CSS.png"
+            },
+            {
+                "Name": "Android Studio",
+                "Image": "../Images/Skills/Technical/Tools/Android_Studio.png"
             }
         ]
     },
