@@ -292,17 +292,17 @@ footer .footer-container {
 .project-image-wrapper {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Reduced gap between images */
+    gap: 15px;
     padding: 20px;
-    flex-wrap: nowrap; /* Prevent wrapping to new line */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .project-image-video-caption {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px; /* Fixed width for each image group */
+    width: 300px;
 }
 
 .project-image-caption {
@@ -347,8 +347,8 @@ footer .footer-container {
 }
 
 .project-uniform-image {
-    width: 300px; /* Fixed width for all images */
-    height: 400px; /* Fixed height */
+    width: 300px;
+    height: 400px;
     object-fit: contain; /* Show whole image without cropping */
     flex-shrink: 0; /* Prevent images from shrinking */
 }
@@ -484,10 +484,66 @@ footer .footer-container {
     display: none;
 }
 
+
+
 /* -------------------- Media (Max-Width) CSS -------------------- */
+
+/* ---------- Hamburger Menu ---------- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform:rotate(45deg) translateY(9px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+}
 
 /* Account for smaller screens */
 @media (max-width: 1000px) {
+    #nav-menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: #0B4A94;
+        border-radius: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    #nav-menu a {
+        margin: 10px 0;
+        font-size: 1.2em;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
     .about-container {
         flex-direction: column;
         align-items: center;
@@ -527,7 +583,7 @@ footer .footer-container {
         max-height: 100px;
         max-width: 150px;
     }
-
+    
     .contact-container {
         flex-direction: column;
         align-items: center;

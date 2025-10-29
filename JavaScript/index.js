@@ -28,6 +28,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
     };
 
+    // Hamburger menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("show");
+    });
+
+    // Close menu after clicking a link
+    document.querySelectorAll("nav a").forEach(link =>
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("show");
+        })
+    );
+
     // ----------------------------------------
     // Populate skills section via JSON
     // ----------------------------------------
