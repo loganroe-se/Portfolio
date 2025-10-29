@@ -1,6 +1,36 @@
 {
     "Experiences": [
         {
+            "Company": "Amazon",
+            "Title": "Ad Tech Software Engineer",
+            "Employment_Type": "Full-Time",
+            "Date": "August 2025 - Present",
+            "Image": "../Images/Logos/Amazon.png",
+            "Accomplishments": [
+                "Migrated <span class=\"experience-quantifiers\">tens of thousands</span> of advertisers between regions using in-depth testing and monitoring health charts to confirm full functionality, while keeping an easy rollback plan in place to mitigate impact.",
+                "Implemented more robust checking for automated recommendations with thorough automated testing for advertisers in the Japan marketplace, resulting in reliable performance for <span class=\"experience-quantifiers\">thousands</span> of advertisers."
+            ],
+            "Languages": [
+                "Java",
+                "TypeScript",
+                "Python"
+            ],
+            "Tools": [
+                "Git",
+                "AWS",
+                "Internal Pipelines"
+            ],
+            "Soft_Skills": [
+                "Presenting",
+                "Communication",
+                "Leadership",
+                "Ownership",
+                "Problem Solving",
+                "Collaboration",
+                "Time Management"
+            ]
+        },
+        {
             "Company": "John Deere",
             "Title": "Computer Engineer",
             "Employment_Type": "Part-Time Student",
