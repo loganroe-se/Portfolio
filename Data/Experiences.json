@@ -18,9 +18,9 @@
                 "Python"
             ],
             "Tools": [
+                "AWS (S3, Glue, Batch, Lambda, EC2, EMR, ECS, Fargate, VPC, Route 53, CloudFront, API Gateway, IAM, CloudWatch, CloudFormation, etc.)",
                 "Git",
-                "AWS",
-                "Internal Pipelines"
+                "Internal Pipelines & Tools"
             ],
             "Soft_Skills": [
                 "Presenting",
