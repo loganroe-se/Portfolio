@@ -7,6 +7,8 @@
             "Date": "August 2025 - Present",
             "Image": "../Images/Logos/Amazon.png",
             "Accomplishments": [
+                "Designed and developed a full-stack recommendation system covering over <span class=\"experience-quantifiers\">30,000</span> unique opportunities across all major regions, which provides in-depth, data-driven budget recommendations and performance gap analysis.",
+                "Engineered scalable, low-latency infrastructure to support automated opportunity generation daily, slide deck generation on-demand, and integrating direct user feedback to improve pitches for <span class=\"experience-quantifiers\">thousands</span> of advertisers.",
                 "Migrated <span class=\"experience-quantifiers\">tens of thousands</span> of advertisers between regions using in-depth testing and monitoring health charts to confirm full functionality, while keeping an easy rollback plan in place to mitigate impact.",
                 "Implemented more robust checking for automated recommendations with thorough automated testing for advertisers in the Japan marketplace, resulting in reliable performance for <span class=\"experience-quantifiers\">thousands</span> of advertisers."
             ],
